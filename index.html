@@ -1,0 +1,57 @@
+<!-- Mensaje secreto :P, si encontraste esto dime-->
+<!DOCTYPE html>
+<html>
+<head>
+<title>Acceso</title>
+
+<style>
+body{
+background:black;
+color:lime;
+font-family:monospace;
+text-align:center;
+margin-top:100px;
+}
+
+input, button{
+background:black;
+color:lime;
+border:1px solid lime;
+padding:10px;
+font-family:monospace;
+}
+</style>
+
+</head>
+
+<body>
+
+<h2>Introduce el código</h2>
+
+<input type="password" id="codigo">
+<button onclick="verificar()">Entrar</button>
+
+<p id="mensaje"></p>
+
+<div id="secreto" style="display:none;">
+<h1>FELICIDADES LO RESOLVISTE! TOMA CAPTURA Y MANDAMELO VSKHR</h1>
+</div>
+
+<script>
+function verificar(){
+
+let codigo = document.getElementById("codigo").value;
+
+if(codigo === "7F3X-91KQ-4ZL2"){
+document.getElementById("secreto").style.display = "block";
+document.getElementById("mensaje").innerText = "Acceso concedido";
+}
+else{
+document.getElementById("mensaje").innerText = "Código incorrecto";
+}
+
+}
+</script>
+
+</body>
+</html>
